@@ -1,0 +1,15 @@
+#! /bin/python
+[Unit]
+Description=HMS
+
+
+[Service]
+ExecStart=/usr/bin/python3 /home/test/Documents/gitfiles/sip/SIP/demo.py
+WorkingDirectory=/home/test/Documents/gitfiles/sip/SIP/
+
+[Timer]
+OnCalendar=*-*-* *:00/30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
